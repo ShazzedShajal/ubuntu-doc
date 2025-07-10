@@ -1,0 +1,42 @@
+Bismillahir Rahmanir Raheem
+
+lab 4: build and run a c file
+
+Do these step by step in command prompt
+
+1. sudo apt install gcc 
+2. gcc -version
+3. sudo apt install build-essential
+4. clear (optional)
+
+5. cd Dextop/
+6. touch xyz.c
+
+7. gcc xyz.c -o test
+8. ./test
+
+
+Note :
+sudo- SuperUser DO: It gives you administrator/root privileges to run a command
+apt - Advanced Package Tool: It helps you install, remove, update, and manage software packages from the official repositories.
+GCC (GNU Compiler Collection).
+touch = Linux command to create a file or update a file’s modification time
+-o test = output compiled binary named test
+
+
+You may find these helpful.
+Alhamdulillah.
+
+lab 5:how to install a web server in Ubuntu.
+
+1. sudo apt update
+2. sudo apt install apache2 -y
+3. sudo systemctl status apache2
+
+
+4. sudo systemctl start apache2
+5. echo " <h1> hello World </h1> | sudo tee /var/www/html/index.html
+
+(web page thakle)
+6. sudo cp page.html /var/www/html/index.html 
+
