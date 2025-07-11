@@ -1,0 +1,60 @@
+-----Bismillahir Rahmanir Raheem
+
+lab 5:how to install a web server in Ubuntu.
+
+1. sudo apt update
+2. sudo apt install apache2 -y
+3. sudo systemctl status apache2
+
+
+4. sudo systemctl start apache2
+5. echo " <h1> hello World </h1> | sudo tee /var/www/html/index.html
+
+(web page thakle)
+6. sudo cp page.html /var/www/html/index.html 
+
+
+-----------------------------------------------------------------------------------------------------
+
+
+
+Start VM...
+
+Open Terminal=>
+
+1. sudo apt update
+2. sudo apt install apache2
+3. sudo systemctl status apache2
+4. sudo systemctl start apache2
+5. cd /var/www/html
+6. ls	(index.html => default apache page)
+
+Open Firefox=>
+
+search => http://localhost/ (open default apache page)
+
+Open Terminal=>
+
+1. cd /var/www/html
+	(present in the /var/www/html path)
+2. sudo gedit welcome.html
+	(create html file into /var/www/html)
+3.ls	(check the presence of created html in the list)
+
+Open Firefox=>
+
+search => localhost/welcome.html (open the html file content)
+
+"""Accessing by Windows Google Chrome"""
+
+Power off the VM...
+
+Create Port=> 
+1. VM settings 
+2. Network 
+3. Adaptor -> NAT
+4. Port Forwarding -> Name: Apache; Protocol: TCP; Host port:8080; Guest port:80
+
+Open Windows Google Chrome=>
+
+search => http://localhost:8080/welcome.html
