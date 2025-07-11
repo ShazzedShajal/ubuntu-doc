@@ -27,16 +27,4 @@ touch = Linux command to create a file or update a file’s modification time
 You may find these helpful.
 Alhamdulillah.
 
-lab 5:how to install a web server in Ubuntu.
-
-1. sudo apt update
-2. sudo apt install apache2 -y
-3. sudo systemctl status apache2
-
-
-4. sudo systemctl start apache2
-5. echo " <h1> hello World </h1> | sudo tee /var/www/html/index.html
-
-(web page thakle)
-6. sudo cp page.html /var/www/html/index.html 
 
