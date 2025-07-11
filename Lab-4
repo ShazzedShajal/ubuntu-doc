@@ -1,29 +1,68 @@
 Bismillahir Rahmanir Raheem
+-----------------------------
 
-lab 4: build and run a c file
+💻 Lab 4: Install and Verify a Working C Compiler (GCC) in Ubuntu VM
+🔧 Objective:
+To install the GCC compiler, build a simple C program, and verify that everything is working correctly inside the Ubuntu virtual machine.
 
-Do these step by step in command prompt
+🧪 Step-by-Step Instructions
 
-1. sudo apt install gcc 
-2. gcc -version
-3. sudo apt install build-essential
-4. clear (optional)
+1️⃣ Install GCC
+sudo apt update
+sudo apt install gcc
 
-5. cd Dextop/
-6. touch xyz.c
+2️⃣ Verify GCC Installation
+gcc --version
 
-7. gcc xyz.c -o test
-8. ./test
+3️⃣ (Optional) Install Additional Build Tools
+sudo apt install build-essential
+🔹 This package includes the GCC compiler, make, libraries, and other tools needed for compiling most C/C++ programs.
+
+4️⃣ Navigate to the Desktop Directory
+cd ~/Desktop/
+
+5️⃣ Create a New C File
+touch xyz.c
+
+6️⃣ Open the File and Write Some C Code
+Use any text editor, e.g.:
+
+nano xyz.c
+
+Paste this simple code:
+#include <stdio.h>
+
+int main() {
+    printf("Hello, Cloud Computing Lab!\n");
+    return 0;
+}
+Save and exit (Ctrl + O, then Enter, then Ctrl + X for nano).
+
+7️⃣ Compile the C Program
+gcc xyz.c -o test
+🔹 This compiles xyz.c and creates an output binary named test.
+
+8️⃣ Run the Compiled Program
+./test
+🔹 Output should be: Hello, Cloud Computing Lab!
+
+📘 Notes & Terminology
+Command	Description
+sudo	Stands for SuperUser DO. Grants admin privileges to run protected commands.
+apt	Advanced Package Tool — used for installing/removing packages on Debian-based systems like Ubuntu.
+gcc	GNU Compiler Collection — used to compile C, C++, and other programs.
+build-essential	A meta-package that includes GCC, make, and other important development tools.
+touch	Creates a new empty file or updates the timestamp of an existing file.
+-o test	Specifies the output filename for the compiled binary.
+
+✅ Expected Output
+After running ./test, the terminal should display:
+
+Hello, Cloud Lab!
 
 
-Note :
-sudo- SuperUser DO: It gives you administrator/root privileges to run a command
-apt - Advanced Package Tool: It helps you install, remove, update, and manage software packages from the official repositories.
-GCC (GNU Compiler Collection).
-touch = Linux command to create a file or update a file’s modification time
--o test = output compiled binary named test
 
-
+----
 You may find these helpful.
 Alhamdulillah.
 
