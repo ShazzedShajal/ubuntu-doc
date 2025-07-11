@@ -1,4 +1,4 @@
-all commands
+all commands:
 
 sudo apt install ufw -y
 sudo ufw status verbose
@@ -25,3 +25,88 @@ sudo nmap -sT -p 80 localhost
 sudo ufw status numbered
 http localhost
 sudo ufw reset
+
+--------------------------------------------------------------------------------------------------------------
+
+# 🔥 Lab 7: Configure Firewall Rules to Allow/Block Specific Ports in Ubuntu VM
+
+## 🎯 Objective
+Use UFW (Uncomplicated Firewall) to allow/block ports like **SSH**, **HTTP (80)**, and **FTP (21)** in the VM.
+
+---
+
+## 🛡️ UFW Setup & Basic Rules
+
+```bash
+# Install UFW (firewall tool)
+sudo apt install ufw -y
+
+# Check UFW status with details
+sudo ufw status verbose
+
+# Allow SSH (port 22) and HTTP (port 80)
+sudo ufw allow ssh
+sudo ufw allow 80
+
+# Enable the firewall
+sudo ufw enable
+
+# View numbered rules
+sudo ufw status numbered
+
+# Delete a rule by number (e.g., rule 1)
+sudo ufw delete 1
+
+# Deny and allow FTP (port 21)
+sudo ufw deny 21
+sudo ufw allow 21
+
+# Check current rules
+sudo ufw status numbered
+
+
+
+
+
+# Install Nmap (port scanning tool)
+sudo apt install nmap -y
+
+# Scan FTP (port 21)
+sudo nmap -sT -p 21 localhost
+
+# Connect to FTP server
+ftp localhost
+
+# Scan HTTP (port 80)
+sudo nmap -sT -p 80 localhost
+
+# Test HTTP access (via browser or curl)
+http localhost
+
+
+
+
+🚫 Block HTTP (Port 80) and Test Again
+
+# Block HTTP
+sudo ufw deny 80
+
+# Scan again to see it's blocked
+sudo nmap -sT -p 80 localhost
+
+# Check UFW rule list
+sudo ufw status numbered
+
+# Try to access HTTP again
+http localhost
+
+
+🔁 Reset UFW (Clear All Rules)
+sudo ufw reset
+
+
+Summary
+Allowed: SSH (22), HTTP (80)
+Blocked/Denied: FTP (21), HTTP (80)
+Tools Used: UFW (firewall), Nmap (port scanner), FTP, HTTP
+
