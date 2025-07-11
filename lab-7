@@ -1,0 +1,27 @@
+all commands
+
+sudo apt install ufw -y
+sudo ufw status verbose
+
+sudo ufw allow ssh
+sudo ufw allow 80
+
+sudo ufw enable
+sudo ufw status numbered
+sudo ufw delete 1
+sudo ufw status numbered
+sudo ufw deny 21
+sudo ufw allow 21
+sudo ufw status numbered
+
+
+sudo apt install nmap -y
+sudo nmap sT -p 21 localhost
+ftp localhost
+sudo nmap -sT -p 80 localhost
+http localhost
+sudo ufw deny 80
+sudo nmap -sT -p 80 localhost
+sudo ufw status numbered
+http localhost
+sudo ufw reset
