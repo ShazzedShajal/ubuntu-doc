@@ -10,3 +10,42 @@ sudo apt install linux-headers-$(uname -r)
 
 # (take ownership if not permissioned)
 sudo chown -R $USER:$USER /path/to/folder
+
+------------------------------------------------------------------------------------------------------------------------------
+
+loudLab-6: File sharing from Windows to VM...
+
+"""Guest Additions installation"""
+
+Start VM
+
+Open Terminal=>
+
+1. sudo apt update
+2. sudo apt install build-essential linux-headers-$(uname -r)
+
+Menubar -> Devices -> insert guest additions CD image -> Click on CD image -> right click -> open terminal =>
+
+1. ls
+2. ./autorun.sh
+
+Restart VM
+
+"""Create a folders in Windows"""
+
+VM -> Settings -> Shared Folders -> Click on right (+) sign -> Add Folder Path -> Select Auto-mount and Make Permanent -> OK
+
+Start VM
+
+Open Terminal=>
+
+1. sudo adduser $USER vboxsf
+
+Restart VM
+
+Open Terminal=>
+
+1. ls /media/sf_Feelings
+
+Open Files folder and check the sf_Feelings folder...
+
